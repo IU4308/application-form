@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Survey Form</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 id="title">Application form</h1>
+    <p id="description">Fill the form to apply</p>
+    <form id="survey-form">
+      <fieldset>
+        <label for="name" id="name-label">
+          Name
+          <input type="text" id="name" name="fullname" placeholder="Enter your name" required>
+        </label>
+        <label for="email" id="email-label">
+          Email
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </label>
+        <label for="number" id="number-label">
+          Age
+          <input type="number" id="number" name="age" min=18 max=100 placeholder="Age" value=20>
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <label for="dropdown" >
+          How did you find us?
+          <select id="dropdown" name="selection">
+            <option value="">(select one)</option>
+            <option value="1">Google Search</option>
+            <option value="2">Social Media</option>
+            <option value="3">Friends</option>
+            <option value="4">Other</option>
+          </select>
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Which work type do you prefer?</legend>
+        <label for="remote-type"><input id="remote-type" type="radio" name="work-type" class="inline" checked value="remote" /> Remote</label>
+        <label for="office-type"><input id="office-type" type="radio" name="work-type" class="inline" value="office" /> Office</label>
+        <label for="hybrid-type"><input id="hybrid-type" type="radio" name="work-type" class="inline" value="hybrid" /> Hybrid</label>
+      </fieldset>
+
+      <fieldset>
+          <legend>Your specialization</legend>
+        <label for="frontend">
+          <input id="frontend" type="checkbox" class="inline" value="frontend" name="specialization" checked>Frontend developer
+        </label>
+        <label for="backend">
+          <input id="backend" type="checkbox" class="inline" value="backend" name="specialization">Backend developer
+        </label>
+        <label for="qa">
+          <input id="qa" type="checkbox" class="inline" value="qa" name="specialization">QA engineer
+        </label>
+        <label for="design">
+          <input id="design" type="checkbox" class="inline" value="design" name="specialization">UI/UX designer
+        </label>
+
+        <label for="bio">About you:
+          <textarea id="bio" name="bio" rows="3" cols="30" placeholder="Bio"></textarea>
+        </label>
+      </fieldset> 
+      <button id="submit" type="submit">Submit</button>
+    </form>
+  </body>
+</html>
